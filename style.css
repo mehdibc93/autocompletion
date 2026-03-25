@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.topbar {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topbar-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2b6cff;
+    white-space: nowrap;
+}
+
+.search-area {
+    position: relative;
+    flex: 1;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 1px solid #ccc;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 14px 22px;
+    border: 1px solid #2b6cff;
+    background: #2b6cff;
+    color: white;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-form button:hover {
+    background: #1f56d6;
+}
+
+.autocomplete-list {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    list-style: none;
+    display: none;
+    max-height: 350px;
+    overflow-y: auto;
+    z-index: 2000;
+}
+
+.autocomplete-list li {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.autocomplete-list li:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-list a,
+.autocomplete-list .separator {
+    display: block;
+    padding: 12px 16px;
+}
+
+.autocomplete-list a:hover {
+    background: #f0f4ff;
+}
+
+.separator {
+    background: #f8f8f8;
+    font-size: 13px;
+    font-weight: bold;
+    color: #666;
+}
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.hero-box {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    color: #2b6cff;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-search {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.results-container,
+.element-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.results-title {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.result-card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 16px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.result-card h2 {
+    color: #2b6cff;
+    margin-bottom: 8px;
+}
+
+.result-card p {
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.badge {
+    display: inline-block;
+    background: #eef3ff;
+    color: #2b6cff;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.element-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.element-header {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.element-header img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    background: #f8f8f8;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.element-card h1 {
+    margin-bottom: 12px;
+    color: #2b6cff;
+}
+
+.github-link {
+    margin-top: 20px;
+    display: inline-block;
+    color: #2b6cff;
+    font-weight: bold;
+}
+
+.empty {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .topbar-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo {
+        text-align: center;
+    }
+}
